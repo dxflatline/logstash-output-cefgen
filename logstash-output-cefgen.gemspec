@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name          = 'logstash-output-cefgen'
-  s.version       = '0.1.0'
+  s.version       = '0.1.0dc'
   s.licenses      = ['Apache License (2.0)']
-  s.summary       = 'Plugin to create a cef string based on a prefix'
-  s.description   = ''
+  s.summary       = 'Modification of the original LS TCP plugin, now to send ArcSight data'
+  s.description   = 'Modification of the original LS TCP plugin, now to send ArcSight data'
   s.homepage      = ''
   s.authors       = ['Dimitris Strevinas']
   s.email         = ''
