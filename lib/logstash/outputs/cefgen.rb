@@ -91,7 +91,7 @@ class LogStash::Outputs::Cefgen < LogStash::Outputs::Base
     event.to_hash.keys.each { |k|
        if k!="cef_deviceVendor" and k!="cef_deviceProduct" and k!="cef_deviceEventClassId" and k!="cef_name" and k!="cef_severity" and k.start_with?(@cefprefix)
           unless event.get(k).nil?
-             temp_val = event.get(k).gsub("=","\\=").gsub("|","\\|").gsub("\\","\\\\").gsub("\n","\\n").gsub("\r","\\r")
+             temp_val = event.get(k).to_s.gsub("=","\\=").gsub("|","\\|").gsub("\\","\\\\").gsub("\n","\\n").gsub("\r","\\r")
              temp_key = k[4..-1]
              cef_output = "#{cef_output}#{temp_key}=#{temp_val} "
           end
